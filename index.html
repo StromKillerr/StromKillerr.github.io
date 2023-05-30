@@ -66,10 +66,20 @@
   function(a){var a=a.toLowerCase(),b=this.all_shortcuts[a];delete this.all_shortcuts[a];if(b){var a=b.event,c=b.target,b=b.callback;
   c.detachEvent?c.detachEvent("on"+a,b):c.removeEventListener?c.removeEventListener(a,b,!1):c["on"+a]=!1}}},shortcut.add("Ctrl+U",function(){top.location.href="http://sahretech.com"});
 </script>
-<!--Kode untuk mencegah shorcut keyboard, view source dll.-->
-<script type="text/javascript">
-  window.addEventListener("keydown",function(e){if(e.ctrlKey&&(e.which==65||e.which==66||e.which==67||e.which==73||e.which==80||e.which==83||e.which==85||e.which==86)){e.preventDefault()}});document.keypress=function(e){if(e.ctrlKey&&(e.which==65||e.which==66||e.which==67||e.which==73||e.which==80||e.which==83||e.which==85||e.which==86)){}return false}
-</script>
-<script type="text/javascript">
-  document.onkeydown=function(e){e=e||window.event;if(e.keyCode==123||e.keyCode==18){return false}}
-</script>
+document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+  return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == ‘I’.charCodeAt(0)){
+  alert(‘@copyright Yourportfolio for your curiculum vitae , resume & your portfolio’)
+  return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == ‘J’.charCodeAt(0)){
+  alert(‘@copyright Yourportfolio for your curiculum vitae , resume & your portfolio’)
+  return false;
+  }
+  if(e.ctrlKey && e.keyCode == ‘U’.charCodeAt(0)){
+  alert(‘@copyright Yourportfolio for your curiculum vitae , resume & your portfolio’)
+  return false;
+  }
+  }
